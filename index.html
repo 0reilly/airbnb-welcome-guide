@@ -252,12 +252,52 @@
   </div>
 
   <p style="font-weight:700;font-size:18px;margin-top:32px;">Be the first to know when it launches — get the early-bird price:</p>
-  <form class="signup-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="waitlist">
-    <p hidden><input name="bot-field"></p>
-    <input type="email" name="email" placeholder="you@example.com" required>
+  <form class="signup-form" id="waitlist-form">
+    <input type="email" name="email" id="waitlist-email" placeholder="you@example.com" required>
     <button type="submit">Join the Waitlist →</button>
+    <p id="form-status" style="font-size:14px;margin-top:8px;display:none;"></p>
   </form>
+  <script>
+    document.getElementById('waitlist-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      const status = document.getElementById('form-status');
+      const email = document.getElementById('waitlist-email').value;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.style.display = 'block';
+      status.style.color = '#718096';
+      status.textContent = 'One moment...';
+      try {
+        const res = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': 'Bearer re_Vt6gVcra_9rzWwnPe5NVD6vyr4Bw5rD2W',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            from: 'HostGuide <hostguide@sweetcli.com>',
+            to: 'design0reilly@gmail.com',
+            subject: '🔥 New Airbnb Guide Waitlist Signup!',
+            html: '<h2>New waitlist signup!</h2><p><strong>Email:</strong> ' + email + '</p><p>Time: ' + new Date().toISOString() + '</p>',
+          }),
+        });
+        if (res.ok) {
+          status.style.color = '#38a169';
+          status.textContent = '✓ You are on the list! We will email you when it launches.';
+          document.getElementById('waitlist-email').value = '';
+        } else {
+          status.style.color = '#e53e3e';
+          status.textContent = '✗ Something went wrong. Please try again.';
+        }
+      } catch (err) {
+        status.style.color = '#e53e3e';
+        status.textContent = '✗ Network error. Please try again.';
+      }
+      btn.disabled = false;
+      btn.textContent = 'Join the Waitlist →';
+    });
+  </script>
   <p style="font-size:13px;color:#a0aec0;margin-top:12px;">No spam. One email when it launches + a free hosting tip.</p>
 </section>
 
