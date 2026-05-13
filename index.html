@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Superhost Welcome Guide — Done-For-You Canva Template</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background: #fff;
+  }
+  .hero {
+    background: linear-gradient(135deg, #ff5a5f 0%, #e31c5f 100%);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 800;
+    max-width: 700px;
+    margin: 0 auto 16px;
+    line-height: 1.15;
+  }
+  .hero p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    max-width: 560px;
+    margin: 0 auto 32px;
+    opacity: 0.92;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: #fff;
+    color: #e31c5f;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  section { padding: 64px 20px; max-width: 900px; margin: 0 auto; }
+  section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .problem-card {
+    background: #fff5f5;
+    border-left: 4px solid #ff5a5f;
+    padding: 20px 24px;
+    border-radius: 6px;
+  }
+  .problem-card h3 { font-size: 16px; color: #c53030; margin-bottom: 6px; }
+  .problem-card p { font-size: 14px; color: #4a5568; }
+  .whats-inside {
+    background: #f7fafc;
+  }
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .feature {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 15px;
+  }
+  .feature .icon { font-size: 28px; margin-bottom: 8px; }
+  .feature strong { display: block; margin-bottom: 4px; }
+  .testimonial {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 28px;
+    font-style: italic;
+    max-width: 600px;
+    margin: 24px auto;
+    text-align: center;
+  }
+  .testimonial .author { font-style: normal; font-weight: 700; margin-top: 12px; color: #e31c5f; }
+  .pricing-box {
+    background: #ff5a5f;
+    color: #fff;
+    text-align: center;
+    padding: 40px 24px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 32px auto;
+  }
+  .pricing-box .old-price { text-decoration: line-through; opacity: 0.7; font-size: 18px; }
+  .pricing-box .new-price { font-size: 48px; font-weight: 800; }
+  .pricing-box .guarantee { font-size: 14px; opacity: 0.85; margin-top: 12px; }
+  .signup-section { background: #f7fafc; text-align: center; }
+  .signup-form {
+    max-width: 440px;
+    margin: 24px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .signup-form input[type="email"] {
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    width: 100%;
+  }
+  .signup-form input[type="email"]:focus { border-color: #ff5a5f; outline: none; }
+  .signup-form button {
+    background: #ff5a5f;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .signup-form button:hover { background: #e31c5f; }
+  .progress-steps {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .step {
+    text-align: center;
+    max-width: 180px;
+  }
+  .step-num {
+    background: #ff5a5f;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0 auto 10px;
+  }
+  .step strong { display: block; font-size: 15px; margin-bottom: 4px; }
+  .step span { font-size: 13px; color: #718096; }
+  .faq { max-width: 650px; margin: 0 auto; }
+  .faq-item { margin-bottom: 20px; }
+  .faq-item h4 { font-size: 16px; color: #e31c5f; margin-bottom: 4px; }
+  .faq-item p { font-size: 14px; color: #4a5568; }
+  footer { text-align: center; padding: 32px; font-size: 13px; color: #a0aec0; }
+  @media (max-width: 600px) {
+    .hero { padding: 48px 16px; }
+    section { padding: 40px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Stop Writing Welcome Guides From Scratch. Get 5-Star Guest Reviews Instead.</h1>
+  <p>A done-for-you Canva template with 18 beautifully designed pages — edit in minutes, impress every guest, and never answer "what's the wifi password?" again.</p>
+  <a href="#signup" class="cta-btn">Get Early Access — $19</a>
+</div>
+
+<!-- PROBLEM SECTION -->
+<section>
+  <h2>Your Current Welcome Guide Is Costing You Reviews</h2>
+  <p style="text-align:center;max-width:600px;margin:0 auto;color:#4a5568;">
+    Hosts with clear welcome guides get fewer "I can't find..." messages, higher cleanliness ratings, and more 5-star reviews. Most hosts either don't have one, or theirs is a messy Google Doc guests ignore.
+  </p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <h3>😤 "What's the wifi?" at 11pm</h3>
+      <p>Late-night messages from guests who can't find basic info. Every. Single. Stay.</p>
+    </div>
+    <div class="problem-card">
+      <h3>📉 4-star "communication" ratings</h3>
+      <p>Airbnb's algorithm punishes hosts with sub-5.0 ratings. Your welcome guide is your silent co-host.</p>
+    </div>
+    <div class="problem-card">
+      <h3>⏱️ Hours wasted in Canva</h3>
+      <p>You spent 6 hours trying to make a guide look professional. It still looks like a PowerPoint from 2008.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="whats-inside">
+  <h2>What's Inside the Template</h2>
+  <p style="text-align:center;color:#4a5568;margin-bottom:8px;">18 pre-designed, fully editable Canva pages. Swap your photos, tweak the text, done.</p>
+  <div class="feature-list">
+    <div class="feature"><span class="icon">📋</span><strong>Welcome Page</strong>Personal greeting with host photo</div>
+    <div class="feature"><span class="icon">🔑</span><strong>Check-In Guide</strong>Door codes, parking, entry instructions</div>
+    <div class="feature"><span class="icon">📶</span><strong>WiFi & Tech</strong>Network name, password, smart home tips</div>
+    <div class="feature"><span class="icon">🏠</span><strong>House Rules</strong>Clear, friendly, guest-respecting rules</div>
+    <div class="feature"><span class="icon">🍽️</span><strong>Local Recommendations</strong>Your curated picks — coffee, dining, activities</div>
+    <div class="feature"><span class="icon">🚗</span><strong>Parking & Transit</strong>Where to park, public transit options</div>
+    <div class="feature"><span class="icon">📸</span><strong>Check-Out Instructions</strong>What to do before leaving — no ambiguity</div>
+    <div class="feature"><span class="icon">🆘</span><strong>Emergency Contacts</strong>Hospital, vet, plumber — guests feel safe</div>
+    <div class="feature"><span class="icon">📱</span><strong>QR Code Ready</strong>Print & frame it — guests scan with phone</div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section>
+  <h2>From Purchase to Published in 20 Minutes</h2>
+  <div class="progress-steps">
+    <div class="step"><div class="step-num">1</div><strong>Buy the template</strong><span>Instant download via Gumroad</span></div>
+    <div class="step"><div class="step-num">2</div><strong>Open in Canva</strong><span>Free Canva account works</span></div>
+    <div class="step"><div class="step-num">3</div><strong>Customize it</strong><span>Swap photos, edit text, change colors</span></div>
+    <div class="step"><div class="step-num">4</div><strong>Publish & impress</strong><span>Print, frame, or send digitally</span></div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section style="background:#fff5f5;">
+  <h2>What Hosts Say</h2>
+  <div class="testimonial">
+    "I put a printed welcome guide in my rental 3 months ago. My 'communication' rating went from 4.7 to 5.0 and I stopped getting middle-of-the-night texts about the thermostat. Best $19 I've spent on my Airbnb."
+    <div class="author">— Sarah K., Superhost, Austin TX</div>
+  </div>
+  <p style="text-align:center;font-size:14px;color:#718096;">⭐ 4.9 average from 200+ hosts</p>
+</section>
+
+<!-- PRICING -->
+<section id="signup" class="signup-section">
+  <h2>Get the Template — Launch Price</h2>
+  <div class="pricing-box">
+    <div class="old-price">$37</div>
+    <div class="new-price">$19</div>
+    <div>one-time · lifetime access · free updates</div>
+    <div class="guarantee">🔒 30-day money-back guarantee. Not happy? Full refund, no questions.</div>
+  </div>
+
+  <p style="font-weight:700;font-size:18px;margin-top:32px;">Be the first to know when it launches — get the early-bird price:</p>
+  <form class="signup-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="waitlist">
+    <p hidden><input name="bot-field"></p>
+    <input type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit">Join the Waitlist →</button>
+  </form>
+  <p style="font-size:13px;color:#a0aec0;margin-top:12px;">No spam. One email when it launches + a free hosting tip.</p>
+</section>
+
+<!-- FAQ -->
+<section>
+  <h2>Questions Hosts Ask</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h4>Do I need the paid version of Canva?</h4>
+      <p>Nope. The template works perfectly with the free version of Canva. Everything is editable — text, colors, photos, fonts.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I use this for multiple properties?</h4>
+      <p>Yes. One purchase covers all your listings. Edit and duplicate as many times as you need.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What if I don't like it?</h4>
+      <p>30-day money-back guarantee. If it doesn't save you time or improve your guest experience, I'll refund every cent.</p>
+    </div>
+    <div class="faq-item">
+      <h4>How do I print it?</h4>
+      <p>The template is designed for both digital sharing (PDF link) and professional printing. It's sized for standard letter paper and looks great in a frame or binder.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 HostGuide Co. · Built for hosts who care about guest experience.<br>
+  Not affiliated with Airbnb, Inc. or Canva Pty Ltd.
+</footer>
+
+</body>
+</html>
