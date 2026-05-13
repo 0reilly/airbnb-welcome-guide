@@ -269,7 +269,7 @@
       status.style.color = '#718096';
       status.textContent = 'One moment...';
       try {
-        const res = await fetch('https://api.resend.com/emails', {
+        const res = await fetch('https://corsproxy.io/?https://api.resend.com/emails', {
           method: 'POST',
           headers: {
             'Authorization': 'Bearer re_Vt6gVcra_9rzWwnPe5NVD6vyr4Bw5rD2W',
