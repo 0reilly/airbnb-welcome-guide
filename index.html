@@ -269,18 +269,13 @@
       status.style.color = '#718096';
       status.textContent = 'One moment...';
       try {
-        const res = await fetch('https://corsproxy.io/?https://api.resend.com/emails', {
+        const res = await fetch('https://curvy-needles-switch.loca.lt/subscribe', {
           method: 'POST',
           headers: {
-            'Authorization': 'Bearer re_Vt6gVcra_9rzWwnPe5NVD6vyr4Bw5rD2W',
             'Content-Type': 'application/json',
+            'Bypass-Tunnel-Reminder': 'true',
           },
-          body: JSON.stringify({
-            from: 'HostGuide <hostguide@sweetcli.com>',
-            to: 'design0reilly@gmail.com',
-            subject: '🔥 New Airbnb Guide Waitlist Signup!',
-            html: '<h2>New waitlist signup!</h2><p><strong>Email:</strong> ' + email + '</p><p>Time: ' + new Date().toISOString() + '</p>',
-          }),
+          body: JSON.stringify({ email }),
         });
         if (res.ok) {
           status.style.color = '#38a169';
